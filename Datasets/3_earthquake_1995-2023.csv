@@ -430,7 +430,7 @@ M 8.3 - Sea of Okhotsk,8.3,5,5,green,1,1115,us,385,0.0,10.0,mww,598.1,54.89,153.
 "M 8.0 - 75 km W of Lata, Solomon Islands",8.0,8,7,green,1,993,us,460,0.0,20.9,mww,24.0,-10.8,165.11,"Lata, Solomon Islands",Oceania,Solomon Islands,6,2,2013
 "M 6.9 - 18 km SSW of Obihiro, Japan",6.9,6,7,yellow,0,814,us,686,0.0,28.0,mww,107.0,42.77,143.09,"Obihiro, Japan",Asia,Japan,2,2,2013
 "M 6.8 - 54 km N of Vallenar, Chile",6.8,6,7,green,0,771,us,596,0.0,19.3,mww,45.0,-28.09,-70.65,"Vallenar, Chile",South America,Chile,30,1,2013
-"M 7.5 - 110 km SW of Edna Bay, Alaska",7.5,6,6,yellow,0,1425,ak,0,0.0,0.0,mw,8.7,55.23,-134.86,"Edna Bay, Alaska",North America,United States,5,1,2013
+"M 7.5 - 110 km SW of Edna Bay, Alaska",7.5,6,6,green,0,1425,ak,0,0.0,0.0,mw,8.7,55.23,-134.86,"Edna Bay, Alaska",North America,United States,5,1,2013
 "M 6.7 - 59 km SSW of Sola, Vanuatu",6.7,0,4,No alert,0,691,us,521,0.0,13.7,mww,200.7,-14.34,167.29,"Sola, Vanuatu",Oceania,Vanuatu,21,12,2012
 M 7.1 - Banda Sea,7.1,5,5,No alert,0,843,us,517,0.0,8.7,mww,155.0,-6.53,129.82,Banda Sea,Asia,Indonesia,10,12,2012
 "M 7.3 - 234 km SE of ?funato, Japan",7.3,6,5,yellow,0,1014,us,918,0.0,14.8,mww,31.0,37.89,143.95,"?funato, Japan",Asia,Japan,7,12,2012
@@ -449,7 +449,7 @@ M 6.5 - Costa Rica,6.5,6,6,yellow,0,745,us,691,0.0,34.4,mww,17.0,10.09,-85.3,Cos
 "M 6.5 - 105 km ESE of Kokopo, Papua New Guinea",6.5,5,6,No alert,0,653,us,576,0.0,11.7,mww,41.0,-4.65,153.17,"Kokopo, Papua New Guinea",Oceania,Papua New Guinea,28,7,2012
 "M 6.6 - 76 km W of Neiafu, Tonga",6.6,4,5,No alert,0,675,us,529,0.0,15.7,mww,134.7,-18.68,-174.7,"Neiafu, Tonga",Oceania,Tonga,28,4,2012
 "M 6.7 - 86 km SSE of Manokwari, Indonesia",6.7,0,7,No alert,0,691,us,370,0.0,15.4,mww,16.0,-1.62,134.28,"Manokwari, Indonesia",Asia,Indonesia,21,4,2012
-"M 6.8 - 140 km N of Lae, Papua New Guinea",6.8,6,5,yellow,0,732,us,597,0.0,12.6,mww,198.0,-5.46,147.12,"Lae, Papua New Guinea",Oceania,Papua New Guinea,17,4,2012
+"M 6.8 - 140 km N of Lae, Papua New Guinea",6.8,6,5,green,0,732,us,597,0.0,12.6,mww,198.0,-5.46,147.12,"Lae, Papua New Guinea",Oceania,Papua New Guinea,17,4,2012
 "M 6.7 - 22 km NW of Hacienda La Calera, Chile",6.7,0,7,No alert,0,691,us,518,0.0,26.9,mww,29.0,-32.62,-71.36,"Hacienda La Calera, Chile",South America,Chile,17,4,2012
 "M 7.0 - 69 km ENE of San Luis, Mexico",7.0,7,7,yellow,0,1000,us,474,0.0,95.9,mww,13.0,28.7,-113.1,"San Luis, Mexico",North America,Mexico,12,4,2012
 "M 6.5 - 41 km NW of El Habillal, Mexico",6.5,7,6,yellow,0,1171,us,599,0.0,54.1,mwb,20.0,18.23,-102.69,"El Habillal, Mexico",North America,Mexico,11,4,2012
@@ -460,10 +460,10 @@ M 6.5 - Costa Rica,6.5,6,6,yellow,0,745,us,691,0.0,34.4,mww,17.0,10.09,-85.3,Cos
 "M 6.7 - 2 km NNE of Jimalalud, Philippines",6.7,9,7,orange,0,1551,us,572,0.0,11.1,mww,11.0,10.0,123.21,"Jimalalud, Philippines",Asia,Philippines,6,2,2012
 "M 7.1 - 125 km W of Port-Vila, Vanuatu",7.1,5,5,No alert,0,793,us,573,0.0,12.0,mww,23.0,-17.83,167.13,"Port-Vila, Vanuatu",Oceania,Vanuatu,2,2,2012
 "M 6.6 - 45 km NNE of Saryg-Sep, Russia",6.6,0,7,No alert,0,670,us,545,0.0,17.6,mww,15.0,51.84,95.91,"Saryg-Sep, Russia",Asia,Russian Federation,27,12,2011
-"M 7.1 - 25 km SSE of Wau, Papua New Guinea",7.1,6,6,yellow,0,834,us,485,0.0,10.6,mww,135.0,-7.55,146.81,"Wau, Papua New Guinea",Oceania,Papua New Guinea,14,12,2011
+"M 7.1 - 25 km SSE of Wau, Papua New Guinea",7.1,6,6,green,0,834,us,485,0.0,10.6,mww,135.0,-7.55,146.81,"Wau, Papua New Guinea",Oceania,Papua New Guinea,14,12,2011
 "M 6.5 - 6 km SSW of Nuevo Balsas, Mexico",6.5,8,7,yellow,0,1400,us,578,0.0,38.6,mww,59.0,17.99,-99.79,"Nuevo Balsas, Mexico",North America,Mexico,11,12,2011
 "M 6.9 - 39 km SW of Santiago, Peru",6.9,6,7,yellow,0,847,us,474,0.0,46.5,mww,24.0,-14.44,-75.97,"Santiago, Peru",South America,Peru,28,10,2011
-"M 7.1 - 27 km NNE of Van, Turkey",7.1,9,9,orange,0,1096,us,693,0.0,19.7,mww,18.0,38.72,43.51,"Van, Turkey",Asia,Turkey,23,10,2011
+"M 7.1 - 27 km NNE of Van, Turkey",7.1,9,9,yellow,0,1096,us,693,0.0,19.7,mww,18.0,38.72,43.51,"Van, Turkey",Asia,Turkey,23,10,2011
 "M 6.5 - 4 km ESE of Finschhafen, Papua New Guinea",6.5,3,6,No alert,0,655,us,423,0.0,12.6,mww,37.0,-6.57,147.88,"Finschhafen, Papua New Guinea",Oceania,Papua New Guinea,14,10,2011
 "M 6.9 - 43 km NW of Mangan, India",6.9,8,8,orange,0,1562,us,383,0.0,13.0,mww,50.0,27.73,88.16,"Mangan, India",Asia,India,18,9,2011
 "M 6.7 - 99 km NE of Miyako, Japan",6.7,5,5,No alert,0,712,us,667,0.0,10.9,mwc,30.0,40.27,142.78,"Miyako, Japan",Asia,Japan,16,9,2011
@@ -478,7 +478,7 @@ M 6.5 - Costa Rica,6.5,6,6,yellow,0,745,us,691,0.0,34.4,mww,17.0,10.09,-85.3,Cos
 "M 6.8 - 124 km NE of Wé, New Caledonia",6.8,4,5,No alert,0,734,us,519,0.0,12.5,mww,11.0,-20.24,168.23,"Wé, New Caledonia",Europe,France,10,5,2011
 "M 6.8 - 79 km W of Kirakira, Solomon Islands",6.8,5,6,No alert,0,719,us,445,0.0,13.0,mww,79.0,-10.38,161.2,"Kirakira, Solomon Islands",Oceania,Solomon Islands,23,4,2011
 "M 6.6 - 17 km SSW of Ishikawa, Japan",6.6,7,7,green,0,822,us,586,0.0,10.1,mww,11.0,37.0,140.4,"Ishikawa, Japan",Asia,Japan,11,4,2011
-"M 7.1 - 29 km ESE of Ishinomaki, Japan",7.1,8,8,orange,0,1114,us,446,0.0,17.7,mww,42.0,38.28,141.59,"Ishinomaki, Japan",Asia,Japan,7,4,2011
+"M 7.1 - 29 km ESE of Ishinomaki, Japan",7.1,8,8,yellow,0,1114,us,446,0.0,17.7,mww,42.0,38.28,141.59,"Ishinomaki, Japan",Asia,Japan,7,4,2011
 "M 6.6 - 7 km SW of Helio García Alfaro, Mexico",6.6,7,6,yellow,0,897,us,518,0.0,37.2,mww,166.2,17.21,-94.34,"Helio García Alfaro, Mexico",North America,Mexico,7,4,2011
 "M 6.9 - 27 km NNW of Tachilek, Myanmar",6.9,7,9,yellow,0,1154,us,335,0.0,18.2,mww,8.0,20.69,99.82,"Tachilek, Myanmar",Asia,Myanmar,24,3,2011
 "M 6.6 - 50 km ESE of ?tsuchi, Japan",6.6,6,5,green,0,673,us,668,0.0,9.5,ms,25.7,39.24,142.46,"?tsuchi, Japan",Asia,Japan,11,3,2011
@@ -513,7 +513,7 @@ M 7.1 - Ecuador,7.1,6,5,yellow,0,945,us,672,0.0,12.4,mwc,206.7,-1.27,-77.31,Ecua
 "M 7.5 - Nicobar Islands, India region",7.5,6,5,yellow,0,1144,us,514,0.0,18.6,mwc,35.0,7.88,91.94,"Nicobar Islands, India region",Asia,India,12,6,2010
 "M 7.2 - 100 km WNW of Sola, Vanuatu",7.2,5,6,No alert,0,804,us,327,0.0,11.7,mwc,31.0,-13.7,166.64,"Sola, Vanuatu",Oceania,Vanuatu,27,5,2010
 "M 7.2 - 45 km SSW of Meulaboh, Indonesia",7.2,5,6,No alert,0,918,us,611,0.0,20.6,mwc,38.0,3.75,96.02,"Meulaboh, Indonesia",Asia,Indonesia,9,5,2010
-"M 6.9 - 233 km NNW of Qamdo, China",6.9,6,9,yellow,0,773,us,410,0.0,14.9,mwc,17.0,33.16,96.55,"Qamdo, China",Asia,China,13,4,2010
+"M 6.9 - 233 km NNW of Qamdo, China",6.9,6,9,green,0,773,us,410,0.0,14.9,mwc,17.0,33.16,96.55,"Qamdo, China",Asia,China,13,4,2010
 "M 6.9 - 99 km WSW of Kirakira, Solomon Islands",6.9,4,5,No alert,0,740,us,399,0.0,12.1,mwc,21.0,-10.88,161.12,"Kirakira, Solomon Islands",Oceania,Solomon Islands,11,4,2010
 "M 7.8 - 75 km E of Sinabang, Indonesia",7.8,0,7,No alert,0,936,us,352,0.0,19.2,mwc,31.0,2.38,97.05,"Sinabang, Indonesia",Asia,Indonesia,6,4,2010
 "M 7.2 - 12km SW of Delta, B.C., MX",7.2,9,9,red,0,2910,ci,10,0.5137,239.0,mw,9.987,32.29,-115.3,"Delta, B.C., MX",North America,Mexico,4,4,2010
@@ -521,7 +521,7 @@ M 7.1 - Ecuador,7.1,6,5,yellow,0,945,us,672,0.0,12.4,mwc,206.7,-1.27,-77.31,Ecua
 "M 6.7 - 52 km NNW of Tomé, Chile",6.7,5,6,No alert,0,856,us,312,0.0,34.7,mwc,18.0,-36.22,-73.26,"Tomé, Chile",South America,Chile,16,3,2010
 "M 6.5 - 59 km ENE of Namie, Japan",6.5,6,5,yellow,0,810,us,491,0.0,27.0,mwc,32.0,37.74,141.59,"Namie, Japan",Asia,Japan,14,3,2010
 "M 7.0 - 52 km NW of Santa Cruz, Chile",7.0,7,7,yellow,0,874,us,403,0.0,17.1,mwc,18.0,-34.33,-71.8,"Santa Cruz, Chile",South America,Chile,11,3,2010
-"M 6.9 - 61 km NW of Santa Cruz, Chile",6.9,7,7,yellow,0,1280,us,415,0.0,12.5,mwc,11.0,-34.29,-71.89,"Santa Cruz, Chile",South America,Chile,11,3,2010
+"M 6.9 - 61 km NW of Santa Cruz, Chile",6.9,7,7,green,0,1280,us,415,0.0,12.5,mwc,11.0,-34.29,-71.89,"Santa Cruz, Chile",South America,Chile,11,3,2010
 "M 6.8 - 141 km W of Bengkulu, Indonesia",6.8,4,6,No alert,0,717,us,401,0.0,23.2,mwc,26.0,-3.76,100.99,"Bengkulu, Indonesia",Asia,Indonesia,5,3,2010
 "M 6.6 - 23 km WNW of Talcahuano, Chile",6.6,7,7,yellow,0,736,us,255,0.0,27.8,mwb,18.0,-36.66,-73.37,"Talcahuano, Chile",South America,Chile,5,3,2010
 "M 6.5 - 48 km NW of Sola, Vanuatu",6.5,0,4,No alert,0,650,us,426,0.0,18.7,mwb,176.0,-13.57,167.23,"Sola, Vanuatu",Oceania,Vanuatu,4,3,2010
@@ -533,7 +533,7 @@ M 7.1 - Ecuador,7.1,6,5,yellow,0,945,us,672,0.0,12.4,mwc,206.7,-1.27,-77.31,Ecua
 "M 6.8 - 127 km SE of Gizo, Solomon Islands",6.8,3,6,No alert,0,713,us,338,0.0,15.0,mwc,15.4,-9.02,157.55,"Gizo, Solomon Islands",Oceania,Solomon Islands,5,1,2010
 "M 7.1 - 94 km SE of Gizo, Solomon Islands",7.1,5,7,No alert,0,780,us,377,0.0,15.0,mwc,10.0,-8.78,157.35,"Gizo, Solomon Islands",Oceania,Solomon Islands,3,1,2010
 "M 6.6 - 98 km SE of Gizo, Solomon Islands",6.6,5,7,No alert,0,672,us,282,0.0,16.6,mwc,10.0,-8.73,157.49,"Gizo, Solomon Islands",Oceania,Solomon Islands,3,1,2010
-"M 6.5 - 92 km N of Iquique, Chile",6.5,6,7,yellow,0,698,us,390,0.0,17.7,mwc,27.0,-19.39,-70.32,"Iquique, Chile",South America,Chile,13,11,2009
+"M 6.5 - 92 km N of Iquique, Chile",6.5,6,7,green,0,698,us,390,0.0,17.7,mwc,27.0,-19.39,-70.32,"Iquique, Chile",South America,Chile,13,11,2009
 "M 7.3 - 77 km ENE of Ba, Fiji",7.3,0,4,No alert,0,820,us,430,0.0,15.0,mwc,595.0,-17.24,178.33,"Ba, Fiji",Oceania,Fiji,9,11,2009
 "M 6.6 - 29 km NNW of Bima, Indonesia",6.6,7,6,yellow,0,677,us,305,0.0,20.4,mwc,18.0,-8.21,118.63,"Bima, Indonesia",Asia,Indonesia,8,11,2009
 "M 6.8 - 98 km NNE of Naze, Japan",6.8,0,6,No alert,0,711,us,424,0.0,21.4,mwc,34.0,29.22,129.78,"Naze, Japan",Asia,Japan,30,10,2009
@@ -584,16 +584,16 @@ M 6.9 - Philippine Islands region,6.9,4,5,No alert,0,740,us,544,0.0,25.9,mwc,24.
 "M 6.5 - 50 km S of Koróni, Greece",6.5,8,5,yellow,0,692,us,650,0.0,30.7,mwc,28.0,36.34,21.86,"Koróni, Greece",Europe,Greece,14,2,2008
 "M 6.9 - 35 km S of Methóni, Greece",6.9,6,6,yellow,0,941,us,645,0.0,30.6,mwc,29.0,36.5,21.67,"Methóni, Greece",Europe,Greece,14,2,2008
 "M 6.5 - 9 km SSW of General Pascual Fentes, Mexico",6.5,7,6,yellow,0,723,us,521,0.0,27.6,mwc,83.0,16.36,-94.3,"General Pascual Fentes, Mexico",North America,Mexico,12,2,2008
-"M 6.6 - 46 km SSE of Gisborne, New Zealand",6.6,7,6,yellow,0,808,us,461,0.0,18.8,mwc,20.0,-39.01,178.29,"Gisborne, New Zealand",Oceania,New Zealand,20,12,2007
+"M 6.6 - 46 km SSE of Gisborne, New Zealand",6.6,7,6,green,0,808,us,461,0.0,18.8,mwc,20.0,-39.01,178.29,"Gisborne, New Zealand",Oceania,New Zealand,20,12,2007
 "M 6.7 - 80 km NNE of Antofagasta, Chile",6.7,5,7,No alert,0,704,us,481,0.0,30.3,mwb,45.0,-22.95,-70.18,Ant,South America,Chile,16,12,2007
 "M 7.4 - 18 km WNW of Basse-Pointe, Martinique",7.4,7,7,yellow,0,1542,us,663,0.0,13.4,mwb,156.0,14.94,-61.27,"Basse-Pointe, Martinique",Europe,France,29,11,2007
 "M 6.6 - 60 km SSE of Kirakira, Solomon Islands",6.6,3,6,No alert,0,672,us,280,0.0,26.9,mwc,16.0,-10.95,162.15,"Kirakira, Solomon Islands",Oceania,Solomon Islands,27,11,2007
 "M 6.5 - 34 km N of Dompu, Indonesia",6.5,5,7,No alert,0,653,us,272,0.0,27.6,mwc,18.0,-8.22,118.47,"Dompu, Indonesia",Asia,Indonesia,25,11,2007
 "M 6.5 - 28 km NNW of Dompu, Indonesia",6.5,7,7,yellow,0,657,us,353,0.0,27.5,mwc,20.0,-8.29,118.37,"Dompu, Indonesia",Asia,Indonesia,25,11,2007
-"M 6.8 - 107 km N of Lae, Papua New Guinea",6.8,6,6,yellow,0,722,us,341,0.0,15.9,mwc,53.0,-5.76,147.1,"Lae, Papua New Guinea",Oceania,Papua New Guinea,22,11,2007
+"M 6.8 - 107 km N of Lae, Papua New Guinea",6.8,6,6,green,0,722,us,341,0.0,15.9,mwc,53.0,-5.76,147.1,"Lae, Papua New Guinea",Oceania,Papua New Guinea,22,11,2007
 "M 6.8 - 30 km E of Macas, Ecuador",6.8,7,6,yellow,0,790,us,649,0.0,27.0,mwc,122.9,-2.31,-77.84,"Macas, Ecuador",South America,Ecuador,16,11,2007
 "M 6.8 - 82 km NNE of Antofagasta, Chile",6.8,6,7,yellow,0,716,us,285,0.0,40.1,mwc,26.0,-22.92,-70.24,Ant,South America,Chile,15,11,2007
-"M 7.7 - 36 km ESE of Tocopilla, Chile",7.7,8,7,yellow,0,995,us,610,0.0,22.4,mwc,40.0,-22.25,-69.89,"Tocopilla, Chile",South America,Chile,14,11,2007
+"M 7.7 - 36 km ESE of Tocopilla, Chile",7.7,8,7,green,0,995,us,610,0.0,22.4,mwc,40.0,-22.25,-69.89,"Tocopilla, Chile",South America,Chile,14,11,2007
 "M 6.8 - 138 km W of Bengkulu, Indonesia",6.8,3,5,No alert,0,713,us,494,0.0,23.9,mwc,21.0,-3.9,101.02,"Bengkulu, Indonesia",Asia,Indonesia,24,10,2007
 "M 6.8 - 70 km N of Te Anau, New Zealand",6.8,4,7,No alert,0,744,us,338,0.0,19.0,mwc,18.0,-44.8,167.55,"Te Anau, New Zealand",Oceania,New Zealand,15,10,2007
 "M 6.8 - 154 km ESE of Kokopo, Papua New Guinea",6.8,4,5,No alert,0,713,us,348,0.0,15.5,mwc,40.0,-4.99,153.5,"Kokopo, Papua New Guinea",Oceania,Papua New Guinea,26,9,2007
@@ -646,7 +646,7 @@ M 8.3 - Kuril Islands,8.3,4,7,No alert,0,1064,us,576,0.0,20.9,mwc,10.0,46.59,153
 "M 7.0 - 160 km SE of Chipinge, Zimbabwe",7.0,5,9,No alert,0,891,us,412,0.0,23.2,mwb,11.0,-21.32,33.58,"Chipinge, Zimbabwe",Africa,Mozambique,22,2,2006
 "M 6.7 - 26 km NE of Kýthira, Greece",6.7,7,6,yellow,0,934,us,769,0.0,19.7,mwb,66.0,36.31,23.21,"Kýthira, Greece",Europe,Greece,8,1,2006
 "M 6.6 - 75 km SSW of Bahía de Kino, Mexico",6.6,7,6,yellow,0,703,us,323,0.0,48.2,mwc,14.0,28.16,-112.12,"Bahía de Kino, Mexico",North America,Mexico,4,1,2006
-"M 6.5 - 53 km SW of Ashk?sham, Afghanistan",6.5,6,5,yellow,0,721,us,529,0.0,20.5,mwb,224.6,36.36,71.09,"Ashk?sham, Afghanistan",Asia,Afghanistan,12,12,2005
+"M 6.5 - 53 km SW of Ashk?sham, Afghanistan",6.5,6,5,green,0,721,us,529,0.0,20.5,mwb,224.6,36.36,71.09,"Ashk?sham, Afghanistan",Asia,Afghanistan,12,12,2005
 "M 6.8 - 76 km ESE of Kalemie, Democratic Republic of the Congo",6.8,5,7,No alert,0,744,us,561,0.0,20.0,mwc,22.0,-6.22,29.83,"Kalemie, Democratic Republic",Africa,Tanzania,5,12,2005
 "M 6.5 - 80 km ESE of Ishinomaki, Japan",6.5,4,5,No alert,0,683,us,464,0.0,48.8,mwc,29.0,38.09,142.12,"Ishinomaki, Japan",Asia,Japan,2,12,2005
 "M 6.5 - 57 km SE of Sinabang, Indonesia",6.5,3,6,No alert,0,651,us,358,0.0,20.7,mwb,21.0,2.16,96.79,"Sinabang, Indonesia",Asia,Indonesia,19,11,2005
@@ -770,7 +770,7 @@ M 7.6 - Scotia Sea,7.6,0,6,No alert,0,889,us,315,0.0,25.2,mwc,10.0,-60.53,-43.41
 "M 7.5 - 155 km E of Kendari, Indonesia",7.5,0,6,No alert,0,865,us,234,0.0,0.0,mwc,33.0,-4.1,123.91,"Kendari, Indonesia",Asia,Indonesia,19,10,2001
 "M 7.0 - 69 km SSE of Inarajan Village, Guam",7.0,0,6,No alert,0,754,us,482,0.0,0.0,mwc,37.0,12.69,144.98,"Inarajan Village, Guam",Oceania,Guam,12,10,2001
 "M 6.5 - 108 km WNW of Manokwari, Indonesia",6.5,0,6,No alert,0,650,us,174,0.0,0.0,mwc,33.0,-0.58,133.13,"Manokwari, Indonesia",Asia,Indonesia,11,9,2001
-"M 6.6 - 74 km S of Kokhanok, Alaska",6.6,6,6,yellow,0,754,ak,0,0.0,0.0,mw,131.8,58.78,-154.7,"Kokhanok, Alaska",North America,United States,28,7,2001
+"M 6.6 - 74 km S of Kokhanok, Alaska",6.6,6,6,green,0,754,ak,0,0.0,0.0,mw,131.8,58.78,-154.7,"Kokhanok, Alaska",North America,United States,28,7,2001
 "M 6.5 - 32 km WNW of Skýros, Greece",6.5,0,8,No alert,0,650,us,483,0.0,0.0,mwc,10.0,39.06,24.24,"Skýros, Greece",Europe,Greece,26,7,2001
 "M 7.6 - 51 km SW of Punta de Bombón, Peru",7.6,0,7,No alert,0,889,us,398,0.0,0.0,mwc,33.0,-17.54,-72.08,"Punta de Bombón, Peru",South America,Peru,7,7,2001
 "M 6.6 - 31 km S of Achanizo, Peru",6.6,0,7,No alert,0,670,us,324,0.0,0.0,mwc,62.0,-16.09,-73.99,"Achanizo, Peru",South America,Peru,5,7,2001
