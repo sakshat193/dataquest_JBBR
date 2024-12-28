@@ -1,0 +1,5 @@
+.env
+Datasets/
+Models/
+__pycache__/
+*.pyc
