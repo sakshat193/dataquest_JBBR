@@ -1,0 +1,63 @@
+index,country,event_count,tsunami_total,Risk,Tsunami_risk
+28,Indonesia,150,14,High,Medium
+44,Papua New Guinea,94,35,High,High
+32,Japan,75,16,High,High
+12,Chile,58,16,High,High
+60,Vanuatu,54,17,High,High
+59,United States,53,29,High,High
+50,Solomon Islands,47,21,High,High
+34,Mexico,42,15,High,High
+47,Russian Federation,37,15,High,High
+46,Philippines,33,14,Medium,Medium
+39,New Zealand,26,18,Medium,High
+45,Peru,26,8,Medium,Medium
+20,France,23,17,Medium,High
+19,Fiji,21,15,Medium,High
+54,Tonga,19,8,Medium,Medium
+13,China,15,0,Medium,Low
+21,Greece,13,0,Low,Low
+27,India,12,0,Low,Low
+51,Taiwan,10,3,Low,Low
+0,Afghanistan,10,0,Low,Low
+17,Ecuador,10,5,Low,High
+56,Turkey,9,0,Low,Low
+29,Iran,9,0,Low,Low
+14,Colombia,9,3,Low,Low
+58,United Kingdom,9,6,Low,Medium
+40,Nicaragua,8,4,Low,Low
+23,Guatemala,8,2,Low,Low
+18,El Salvador,8,3,Low,Low
+43,Panama,7,5,Low,High
+11,Canada,6,3,Low,Low
+37,Myanmar,6,0,Low,Low
+4,Argentina,6,2,Low,Low
+10,Brazil,5,2,Low,Low
+42,Pakistan,5,0,Low,Low
+8,Bolivia,4,0,Low,Low
+15,Costa Rica,4,1,Low,Low
+38,Nepal,4,0,Low,Low
+2,Antarctica,3,3,Low,Low
+22,Guam,3,1,Low,Low
+6,Azerbaijan,2,0,Low,Low
+5,Australia,2,0,Low,Low
+26,Iceland,2,0,Low,Low
+7,Barbados,2,2,Low,Low
+25,Honduras,2,1,Low,Low
+24,Haiti,2,1,Low,Low
+16,Cyprus,2,0,Low,Low
+53,Tanzania,2,0,Low,Low
+52,Tajikistan,2,0,Low,Low
+61,Venezuela,2,1,Low,Low
+9,Botswana,1,0,Low,Low
+3,Antigua and Barbuda,1,1,Low,Low
+1,Algeria,1,0,Low,Low
+33,Kyrgyzstan,1,0,Low,Low
+36,Mozambique,1,0,Low,Low
+41,Norway,1,1,Low,Low
+31,Jamaica,1,1,Low,Low
+35,Mongolia,1,0,Low,Low
+30,Italy,1,0,Low,Low
+48,Samoa,1,0,Low,Low
+49,Saudi Arabia,1,0,Low,Low
+57,Turkmenistan,1,0,Low,Low
+55,Trinidad and Tobago,1,0,Low,Low
