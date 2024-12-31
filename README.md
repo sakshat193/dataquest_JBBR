@@ -24,7 +24,7 @@ This directory contains Jupyter notebooks dedicated to data preprocessing, explo
 
 - **Models:** Contains serialized trained models in pickle format, ready for deployment and inference.
 
-- **Predictions_training:** Houses scripts for model building and fitting. Each script is named to reflect its specific function, such as `build_alert_model.py` for constructing the alert model and `fit_alert_model.py` for training it with data.
+- **Predictions_training:** Houses scripts for model building and fitting. Each script is named to reflect its specific function..
 
 ### 2. Datasets
 
