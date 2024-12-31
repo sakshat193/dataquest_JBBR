@@ -14,7 +14,7 @@ This directory contains Jupyter notebooks dedicated to data preprocessing, explo
 
 - **train2:** Preprocessing of continent data, utilizing geocoding techniques to fill missing entries.
 
-- **train2eda:** Exploratory data analysis and preprocessing of the alert column, establishing initial alert classifications.
+- **train2(EDA):** Exploratory data analysis and preprocessing of the alert column, establishing initial alert classifications.
 
 - **train3:** Development of the alert prediction model using XGBoost, training on key features to predict alert levels.
 
