@@ -1,7 +1,6 @@
 import streamlit as st
 from pages.alert_prediction import alert_prediction
 from pages.power_bi_dashboard import power_bi_dashboard
-from pages.significance import significance
 # Custom CSS for glowing button effect
 def add_custom_css():
     st.markdown("""
@@ -61,8 +60,6 @@ def main():
         alert_prediction()
     elif st.session_state.current_page == "Power BI Dashboard":
         power_bi_dashboard()
-    elif st.session_state.current_page == "Significance":
-        significance()
 
 if __name__ == "__main__":
     main()
