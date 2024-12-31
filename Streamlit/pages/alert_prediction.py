@@ -71,7 +71,10 @@ def alert_prediction():
     # User inputs
     dmin = st.number_input("Minimum Distance to Epicenter (dmin)", min_value=0.0)
     sig = st.number_input("Significance (sig)", min_value=0)
-    magnitude = st.number_input("Magnitude", min_value=0.0)
+    
+    # Replace magnitude input with a slider
+    magnitude = st.slider("Magnitude", min_value=0.0, max_value=10.0, step=0.1, value=5.0)
+    
     tsunami = st.selectbox("Tsunami Warning", ["No", "Yes"], help="Select 'Yes' for 1 and 'No' for 0")
     depth = st.number_input("Depth (km)", min_value=0.0)
 
@@ -100,12 +103,12 @@ def alert_prediction():
             alert_status = 'Orange'
             
         if alert_status == 'no alert':
-            alert_status = 'No alert'
+            alert_status = 'No Alert'
 
         # Get color and set text color for prediction
         color = get_color(alert_status)
-        text_color = "black" if alert_status == "No Alert" else "red" if alert_status == "red" else \
-                     "orange" if alert_status == "orange" else "yellow" if alert_status == "yellow" else "green"
+        text_color = "black" if alert_status == "No Alert" else "red" if alert_status == "Red" else \
+                     "orange" if alert_status == "Orange" else "yellow" if alert_status == "Yellow" else "green"
 
         # Display prediction with color-coded box and text
         st.markdown(f"""

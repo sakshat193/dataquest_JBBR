@@ -73,11 +73,11 @@ def power_bi_dashboard():
     if st.button("🏠 Home"):
         st.session_state.current_page = "Home"
         st.rerun()
-        
+
     # Add some spacing after the home button
     st.markdown("<br><br>", unsafe_allow_html=True)
 
-    st.title("Power BI Dashboard")
+    st.title("Power BI Dashboards and Maps")
 
     # Embed the first Power BI Dashboard
     powerbi_url = "https://app.powerbi.com/view?r=eyJrIjoiNmUwZmE5MTgtNTliNC00MjAwLWE3MTItZGNiNmU3YzgzZTZhIiwidCI6ImQxZjE0MzQ4LWYxYjUtNGEwOS1hYzk5LTdlYmYyMTNjYmM4MSIsImMiOjEwfQ%3D%3D"
