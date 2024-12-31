@@ -20,6 +20,8 @@ This directory contains Jupyter notebooks dedicated to data preprocessing, explo
 
 - **train4:** Application of the alert prediction model for imputing missing alert values and evaluating model performance. This notebook also underpins the alert evaluation feature in the web application.
 
+- - **EDA/EDA_aishwarya:** Contains all the EDA which was presented in the report 
+
 #### Subdirectories:
 
 - **Models:** Contains serialized trained models in pickle format, ready for deployment and inference.
