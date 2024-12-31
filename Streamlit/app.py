@@ -45,10 +45,6 @@ def home():
         if st.button("Power BI Dashboard", key="dashboard"):
             st.session_state.current_page = "Power BI Dashboard"
             st.rerun()
-    with col3:
-        if st.button("Significance", key="significance"):
-            st.session_state.current_page = "Significance"
-            st.rerun()
 
 # Main App
 def main():
