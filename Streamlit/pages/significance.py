@@ -4,6 +4,11 @@ import pandas as pd
 from geopy.geocoders import Nominatim
 import time
 
+def significance():
+    st.title("Earthquake Event Significance Predictor")
+    st.write("This page predicts the significance of earthquake events based on input features.")
+   
+
 # Load pre-trained significance prediction model and transformers
 def load_pickle(file_path):
     with open(file_path, 'rb') as file:
