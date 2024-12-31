@@ -106,7 +106,7 @@ def power_bi_dashboard():
             <a href="https://app.powerbi.com/view?r=eyJrIjoiYjZmNGFjMzUtNTBhNy00MGQ0LTljZjItY2ZhNmM1M2E3OWEwIiwidCI6ImQxZjE0MzQ4LWYxYjUtNGEwOS1hYzk5LTdlYmYyMTNjYmM4MSIsImMiOjEwfQ%3D%3D" target="_blank">
                 Open Seismic Activity Map
             </a>
-            <a href="https://app.powerbi.com/view?r=eyJrIjoiYjZmNGFjMzUtNTBhNy00MGQ0LTljZjItY2ZhNmM1M2E3OWEwIiwidCI6ImQxZjE0MzQ4LWYxYjUtNGEwOS1hYzk5LTdlYmYyMTNjYmM4MSIsImMiOjEwfQ%3D%3D" target="_blank">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNjcxYThkZjEtY2NkZC00MmFhLTlmYzMtMDNiZDJlYmM0ZDE5IiwidCI6ImQxZjE0MzQ4LWYxYjUtNGEwOS1hYzk5LTdlYmYyMTNjYmM4MSIsImMiOjEwfQ%3D%3D" target="_blank">
                 Open Tsunami Risk Map
             </a>
         </div>
