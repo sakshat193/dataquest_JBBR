@@ -107,7 +107,7 @@ def alert_prediction():
 
         # Get color and set text color for prediction
         color = get_color(alert_status)
-        text_color = "black" if alert_status == "No Alert" else "red" if alert_status == "Red" else \
+        text_color = "black" if alert_status == "No alert" else "red" if alert_status == "Red" else \
                      "orange" if alert_status == "Orange" else "yellow" if alert_status == "Yellow" else "green"
 
         # Display prediction with color-coded box and text
