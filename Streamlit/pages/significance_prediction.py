@@ -3,7 +3,8 @@ import pandas as pd
 import pickle
 import numpy as np
 try:
-    from geopy.geocoders import Nominatim  # Changed from geopy.geocoder to geopy.geocoders
+    from geopy.geocoders import Nominatim
+    from geopy.exc import GeocoderTimedOut, GeocoderUnavailable
 except ImportError:
     st.error("Please install geopy using: pip install geopy --user")
     st.stop()
@@ -19,28 +20,40 @@ def load_models(base_path="Notebooks/Predictions_Training/Models/"):
         selected_features = pickle.load(f)
     return model, transformers, selected_features
 
-def get_location_from_coords(latitude, longitude):
-    """Get location name from coordinates"""
+def get_location_from_coords(latitude, longitude, max_retries=3):
+    """Get location name from coordinates with retry mechanism"""
     geolocator = Nominatim(user_agent="earthquake_app")
-    try:
-        coords = f"{latitude}, {longitude}"
-        location = geolocator.reverse(coords, language='en')
-        
-        if location and location.raw.get('address'):
-            address = location.raw['address']
-            state = (
-                address.get('state_en') or 
-                address.get('state') or 
-                address.get('province_en') or 
-                address.get('province') or 
-                ''
-            )
-            country = address.get('country_en') or address.get('country', '')
-            return f"{state}, {country}".strip(', ')
-        return "Unknown Location"
-    except Exception as e:
-        st.error(f"Error getting location: {e}")
-        return "Unknown Location"
+    
+    for attempt in range(max_retries):
+        try:
+            coords = f"{latitude}, {longitude}"
+            location = geolocator.reverse(coords, language='en', timeout=10)
+            
+            if location and location.raw.get('address'):
+                address = location.raw['address']
+                state = (
+                    address.get('state_en') or 
+                    address.get('state') or 
+                    address.get('province_en') or 
+                    address.get('province') or 
+                    ''
+                )
+                country = address.get('country_en') or address.get('country', '')
+                return f"{state}, {country}".strip(', '), True
+            
+            time.sleep(1)  # Wait between retries
+            
+        except (GeocoderTimedOut, GeocoderUnavailable) as e:
+            if attempt == max_retries - 1:
+                st.warning("Location service is temporarily unavailable. Using coordinates as location.")
+                return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
+            time.sleep(2)  # Wait longer between retries
+            
+        except Exception as e:
+            st.warning("Unable to fetch location details. Using coordinates as location.")
+            return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
+    
+    return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
 
 def significance_prediction():
     st.title("Earthquake Significance Prediction")
@@ -68,12 +81,16 @@ def significance_prediction():
             # Display location immediately after coordinates input
             if latitude != 0.0 or longitude != 0.0:  # Only show if coordinates are changed
                 with st.spinner("Detecting location..."):
-                    detected_location = get_location_from_coords(latitude, longitude)
-                    st.markdown("### Detected Location")
+                    detected_location, success = get_location_from_coords(latitude, longitude)
+                    
+                    # Different styling based on whether location service worked
+                    border_color = "#4CAF50" if success else "#FFA500"
+                    icon = "📍" if success else "⚠️"
+                    
+                    st.markdown("### Location Information")
                     st.markdown(f"""
-                    <div style='padding: 10px; border-radius: 5px; border: 1px solid #4CAF50; background-color: #f8f9fa;'>
-                        📍 <b>{detected_location}</b><br>
-                        <small>Coordinates: ({latitude:.4f}, {longitude:.4f})</small>
+                    <div style='padding: 10px; border-radius: 5px; border: 1px solid {border_color}; background-color: #f8f9fa;'>
+                        {icon} <b>{detected_location}</b>
                     </div>
                     """, unsafe_allow_html=True)
             
@@ -82,7 +99,7 @@ def significance_prediction():
             
             # Get location based on coordinates
             if st.form_submit_button("Predict Significance"):
-                location = get_location_from_coords(latitude, longitude)
+                location, _ = get_location_from_coords(latitude, longitude)
                 
                 # Prepare input data
                 input_data = pd.DataFrame({
