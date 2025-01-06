@@ -18,9 +18,7 @@ def load_models(base_path="Notebooks/Predictions_Training/Models/"):
             model = pickle.load(f)
         with open(f"{base_path}sig_transformers.pkl", 'rb') as f:
             transformers = pickle.load(f)
-        with open(f"{base_path}sig_selected_features.pkl", 'rb') as f:
-            selected_features = pickle.load(f)
-        return model, transformers, selected_features
+        return model, transformers
     except Exception as e:
         st.error(f"Error loading models: {e}")
         st.stop()
@@ -63,12 +61,24 @@ def get_location_from_coords(latitude, longitude, max_retries=3):
     return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
 
 
+def encode_alert(alert):
+    """Encode alert levels into numerical values"""
+    alert_mapping = {
+        "No alert": 0,
+        "green": 1,
+        "yellow": 2,
+        "orange": 3,
+        "red": 4
+    }
+    return alert_mapping.get(alert, 0)
+
+
 def significance_prediction():
     st.title("Earthquake Significance Prediction")
     
     try:
         # Load models
-        model, transformers, selected_features = load_models()
+        model, transformers = load_models()
         
         # Create input form
         with st.form("significance_prediction_form"):
@@ -102,21 +112,17 @@ def significance_prediction():
                     </div>
                     """, unsafe_allow_html=True)
             
-            # CDI input
-            cdi = st.number_input("Community Decimal Intensity (CDI)", min_value=0.0, max_value=12.0, value=0.0)
-            
-            # Get location based on coordinates
+            # Submit button
             if st.form_submit_button("Predict Significance"):
-                location, _ = get_location_from_coords(latitude, longitude)
+                # Encode alert
+                encoded_alert = encode_alert(alert)
                 
                 # Prepare input data
                 input_data = pd.DataFrame({
-                    'alert': [alert],
+                    'alert': [encoded_alert],
                     'magnitude': [magnitude],
                     'longitude': [longitude],
-                    'latitude': [latitude],
-                    'cdi': [cdi],
-                    'location': [location]
+                    'latitude': [latitude]
                 })
                 
                 # Transform features
@@ -128,13 +134,10 @@ def significance_prediction():
                         except Exception as e:
                             st.warning(f"Error transforming feature '{feature}': {e}")
                 
-                # Select required features
-                X = transformed_data[selected_features]
-                
                 # Make prediction
                 try:
-                    significance = model.predict(X)[0]
-                    significance_prob = model.predict_proba(X)[0]
+                    significance = model.predict(transformed_data)[0]
+                    significance_prob = model.predict_proba(transformed_data)[0]
                     
                     # Display results
                     st.success(f"Predicted Significance: {significance}")
