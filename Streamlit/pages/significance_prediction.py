@@ -10,24 +10,31 @@ except ImportError:
     st.stop()
 import time
 
+
 def load_models(base_path="Notebooks/Predictions_Training/Models/"):
     """Load all required models and transformers"""
-    with open(f"{base_path}sig_model.pkl", 'rb') as f:
-        model = pickle.load(f)
-    with open(f"{base_path}sig_transformers.pkl", 'rb') as f:
-        transformers = pickle.load(f)
-    with open(f"{base_path}sig_selected_features.pkl", 'rb') as f:
-        selected_features = pickle.load(f)
-    return model, transformers, selected_features
+    try:
+        with open(f"{base_path}sig_model.pkl", 'rb') as f:
+            model = pickle.load(f)
+        with open(f"{base_path}sig_transformers.pkl", 'rb') as f:
+            transformers = pickle.load(f)
+        with open(f"{base_path}sig_selected_features.pkl", 'rb') as f:
+            selected_features = pickle.load(f)
+        return model, transformers, selected_features
+    except Exception as e:
+        st.error(f"Error loading models: {e}")
+        st.stop()
+
 
 def get_location_from_coords(latitude, longitude, max_retries=3):
-    """Get location name from coordinates with retry mechanism"""
+    """Get location name from coordinates with retry mechanism and extended error handling"""
     geolocator = Nominatim(user_agent="earthquake_app")
     
     for attempt in range(max_retries):
         try:
+            st.info(f"Attempt {attempt+1}: Fetching location for coordinates ({latitude}, {longitude})...")
             coords = f"{latitude}, {longitude}"
-            location = geolocator.reverse(coords, language='en', timeout=10)
+            location = geolocator.reverse(coords, language='en', timeout=20)
             
             if location and location.raw.get('address'):
                 address = location.raw['address']
@@ -45,15 +52,16 @@ def get_location_from_coords(latitude, longitude, max_retries=3):
             
         except (GeocoderTimedOut, GeocoderUnavailable) as e:
             if attempt == max_retries - 1:
-                st.warning("Location service is temporarily unavailable. Using coordinates as location.")
+                st.warning(f"Location service is temporarily unavailable. Attempt {attempt+1} failed: {e}")
                 return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
             time.sleep(2)  # Wait longer between retries
             
         except Exception as e:
-            st.warning("Unable to fetch location details. Using coordinates as location.")
+            st.error(f"Unexpected error occurred: {e}")
             return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
     
     return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
+
 
 def significance_prediction():
     st.title("Earthquake Significance Prediction")
@@ -115,36 +123,43 @@ def significance_prediction():
                 transformed_data = input_data.copy()
                 for feature, transformer in transformers.items():
                     if feature in input_data.columns:
-                        transformed_data[feature] = transformer.transform(input_data[feature].values.reshape(-1, 1))
+                        try:
+                            transformed_data[feature] = transformer.transform(input_data[feature].values.reshape(-1, 1))
+                        except Exception as e:
+                            st.warning(f"Error transforming feature '{feature}': {e}")
                 
                 # Select required features
                 X = transformed_data[selected_features]
                 
                 # Make prediction
-                significance = model.predict(X)[0]
-                significance_prob = model.predict_proba(X)[0]
-                
-                # Display results
-                st.success(f"Predicted Significance: {significance}")
-                
-                # Display probability distribution
-                st.write("Probability Distribution:")
-                prob_df = pd.DataFrame({
-                    'Significance Level': model.classes_,
-                    'Probability': significance_prob
-                })
-                st.bar_chart(prob_df.set_index('Significance Level'))
-                
-                # Additional information
-                st.write("### Interpretation Guide:")
-                st.write("- Significance < 100: Minor impact")
-                st.write("- Significance 100-500: Moderate impact")
-                st.write("- Significance 500-1000: Major impact")
-                st.write("- Significance > 1000: Severe impact")
-
+                try:
+                    significance = model.predict(X)[0]
+                    significance_prob = model.predict_proba(X)[0]
+                    
+                    # Display results
+                    st.success(f"Predicted Significance: {significance}")
+                    
+                    # Display probability distribution
+                    st.write("Probability Distribution:")
+                    prob_df = pd.DataFrame({
+                        'Significance Level': model.classes_,
+                        'Probability': significance_prob
+                    })
+                    st.bar_chart(prob_df.set_index('Significance Level'))
+                    
+                    # Additional information
+                    st.write("### Interpretation Guide:")
+                    st.write("- Significance < 100: Minor impact")
+                    st.write("- Significance 100-500: Moderate impact")
+                    st.write("- Significance 500-1000: Major impact")
+                    st.write("- Significance > 1000: Severe impact")
+                except Exception as e:
+                    st.error(f"Prediction error: {e}")
+    
     except Exception as e:
         st.error(f"An error occurred: {e}")
         st.write("Please ensure all model files are in the correct location and the input values are valid.")
+
 
 if __name__ == "__main__":
     significance_prediction()
