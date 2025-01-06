@@ -28,7 +28,7 @@ def load_models(base_path="Notebooks/Predictions_Training/Models/"):
 
 def get_location_from_coords(latitude, longitude, max_retries=3):
     """Get location name from coordinates with retry mechanism and extended error handling"""
-    geolocator = Nominatim(user_agent="earthquake_app")
+    geolocator = Nominatim(user_agent="app")
     
     for attempt in range(max_retries):
         try:
