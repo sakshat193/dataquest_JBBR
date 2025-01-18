@@ -75,19 +75,6 @@ FEATURE_INFO = {
     - Typical range: 0° to 180°
     """,
     
-    "sig": """
-    **Significance of the Earthquake**
-    
-    A number that describes the relative significance of the earthquake.
-    - Calculated from magnitude and felt reports
-    - Higher values indicate more significant events
-    - Considers factors like:
-        * Population exposure
-        * Potential damage
-        * Media attention
-    - Typical range: 0 to 1000
-    """,
-    
     "magnitude": """
     **Earthquake Magnitude**
     
@@ -125,6 +112,15 @@ FEATURE_INFO = {
         * Intermediate: 70-300 km
         * Deep: 300-700 km
     - Shallow earthquakes typically cause more surface damage
+    """,
+
+    "lat_long": """
+    **Latitude and Longitude**
+    
+    These are the geographic coordinates that specify a location on Earth's surface:
+    - **Latitude**: North-South position (-90° to +90°)
+    - **Longitude**: East-West position (-180° to +180°)
+    - Together, they help identify the earthquake's epicenter.
     """
 }
 
@@ -134,7 +130,7 @@ def alert_prediction():
     add_custom_css()
     
     # Add a Streamlit button for Home navigation
-    if st.button("🏠 Home", key="home_button", help="Return to the Home page"):
+    if st.button("\U0001F3E0 Home", key="home_button", help="Return to the Home page"):
         st.session_state.current_page = "Home"
         st.rerun()
     
@@ -145,10 +141,6 @@ def alert_prediction():
     with st.expander("ℹ️ What is Minimum Distance to Epicenter?"):
         st.markdown(FEATURE_INFO["dmin"])
     dmin = st.number_input("Minimum Distance to Epicenter (dmin)", min_value=0.0)
-    
-    with st.expander("ℹ️ What is Earthquake Significance?"):
-        st.markdown(FEATURE_INFO["sig"])
-    sig = st.number_input("Significance of the Earthquake", min_value=0)
     
     with st.expander("ℹ️ What is Earthquake Magnitude?"):
         st.markdown(FEATURE_INFO["magnitude"])
@@ -162,13 +154,22 @@ def alert_prediction():
         st.markdown(FEATURE_INFO["depth"])
     depth = st.number_input("Depth (km)", min_value=0.0)
 
+    # Combined Latitude and Longitude
+    with st.expander("ℹ️ What are Latitude and Longitude?"):
+        st.markdown(FEATURE_INFO["lat_long"])
+    col1, col2 = st.columns(2)
+    with col1:
+        latitude = st.number_input("Latitude", min_value=-90.0, max_value=90.0, step=0.1)
+    with col2:
+        longitude = st.number_input("Longitude", min_value=-180.0, max_value=180.0, step=0.1)
+
     tsunami = 1 if tsunami == "Yes" else 0
 
     # Prediction button
     if st.button("Predict Alert"):
         # Prepare input data
-        input_data = pd.DataFrame([[dmin, sig, magnitude, tsunami, depth]],
-                                  columns=["dmin", "sig", "magnitude", "tsunami", "depth"])
+        input_data = pd.DataFrame([[dmin, magnitude, tsunami, depth, latitude, longitude]],
+                                  columns=["dmin", "magnitude", "tsunami", "depth", "latitude", "longitude"])
         input_scaled = scaler.transform(input_data)
         prediction = model.predict(input_scaled)
 
