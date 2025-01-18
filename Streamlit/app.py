@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 from pages.alert_prediction import alert_prediction
 from pages.power_bi_dashboard import power_bi_dashboard
 from pages.significance_prediction import significance_prediction
@@ -29,6 +30,13 @@ def add_custom_css():
         </style>
     """, unsafe_allow_html=True)
 
+# Function to load and display the map
+def display_map():
+    map_path = "m_map.html"
+    with open(map_path, "r", encoding="utf-8") as f:
+        map_html = f.read()
+    components.html(map_html, height=600, scrolling=True)
+
 # Home Page
 def home():
     st.title("Earthquake Alert Prediction System")
@@ -46,10 +54,15 @@ def home():
         if st.button("Power BI Dashboard", key="dashboard"):
             st.session_state.current_page = "Power BI Dashboard"
             st.rerun()
-    with col3:  # Add this block
+    with col3:
         if st.button("Significance Prediction", key="significance"):
             st.session_state.current_page = "Significance Prediction"
             st.rerun()
+
+    # Display the map below the buttons
+    st.markdown("---")
+    st.subheader("Earthquake Locations Map")
+    display_map()
 
 # Main App
 def main():
@@ -66,7 +79,7 @@ def main():
         alert_prediction()
     elif st.session_state.current_page == "Power BI Dashboard":
         power_bi_dashboard()
-    elif st.session_state.current_page == "Significance Prediction":  # Add this block
+    elif st.session_state.current_page == "Significance Prediction":
         significance_prediction()
 
 if __name__ == "__main__":
