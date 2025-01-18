@@ -7,10 +7,10 @@ import os
 # Load the pre-saved components from the same directory as the app
 base_path="Notebooks/Predictions_Training/Models/"
 
-with open(os.path.join(base_path, "scaler.pkl"), "rb") as f:
+with open(f"{base_path}scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
-with open(os.path.join(base_path, "best_rfc_model.pkl"), "rb") as f:
+with open(f"{base_path}best_rfc_model.pkl", "rb") as f:
     best_rfc = pickle.load(f)
 
 # Function to encode alert levels
