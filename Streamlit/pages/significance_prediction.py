@@ -14,11 +14,14 @@ import time
 def load_models(base_path="Notebooks/Predictions_Training/Models/"):
     """Load all required models and transformers"""
     try:
-        with open(f"{base_path}sig_model.pkl", 'rb') as f:
+        # Load the model and transformers
+        with open(f"{base_path}best_rfc_model.pkl", 'rb') as f:
             model = pickle.load(f)
-        with open(f"{base_path}sig_transformers.pkl", 'rb') as f:
-            transformers = pickle.load(f)
-        return model, transformers
+        with open(f"{base_path}scaler.pkl", 'rb') as f:
+            scaler = pickle.load(f)
+        with open(f"{base_path}top_6_features.pkl", 'rb') as f:
+            top_6_features = pickle.load(f)
+        return model, scaler, top_6_features
     except Exception as e:
         st.error(f"Error loading models: {e}")
         st.stop()
@@ -61,24 +64,12 @@ def get_location_from_coords(latitude, longitude, max_retries=3):
     return f"Coordinates: ({latitude:.4f}, {longitude:.4f})", False
 
 
-def encode_alert(alert):
-    """Encode alert levels into numerical values"""
-    alert_mapping = {
-        "No alert": 0,
-        "green": 1,
-        "yellow": 2,
-        "orange": 3,
-        "red": 4
-    }
-    return alert_mapping.get(alert, 0)
-
-
 def significance_prediction():
     st.title("Earthquake Significance Prediction")
     
     try:
-        # Load models
-        model, transformers = load_models()
+        # Load models and preprocessing tools
+        model, scaler, top_6_features = load_models()
         
         # Create input form
         with st.form("significance_prediction_form"):
@@ -114,8 +105,9 @@ def significance_prediction():
             
             # Submit button
             if st.form_submit_button("Predict Significance"):
-                # Encode alert
-                encoded_alert = encode_alert(alert)
+                # Encode alert as a numerical value
+                alert_mapping = {"No alert": 0, "green": 1, "yellow": 2, "orange": 3, "red": 4}
+                encoded_alert = alert_mapping.get(alert, 0)
                 
                 # Prepare input data
                 input_data = pd.DataFrame({
@@ -125,19 +117,17 @@ def significance_prediction():
                     'latitude': [latitude]
                 })
                 
-                # Transform features
+                # Transform features using the loaded scaler
                 transformed_data = input_data.copy()
-                for feature, transformer in transformers.items():
-                    if feature in input_data.columns:
-                        try:
-                            transformed_data[feature] = transformer.transform(input_data[feature].values.reshape(-1, 1))
-                        except Exception as e:
-                            st.warning(f"Error transforming feature '{feature}': {e}")
+                transformed_data[['longitude', 'latitude']] = scaler.transform(input_data[['longitude', 'latitude']])
+
+                # Select only the top 6 features for the model
+                transformed_data_top_6 = transformed_data.iloc[:, top_6_features]
                 
-                # Make prediction
+                # Make prediction using the trained model
                 try:
-                    significance = model.predict(transformed_data)[0]
-                    significance_prob = model.predict_proba(transformed_data)[0]
+                    significance = model.predict(transformed_data_top_6)[0]
+                    significance_prob = model.predict_proba(transformed_data_top_6)[0]
                     
                     # Display results
                     st.success(f"Predicted Significance: {significance}")
