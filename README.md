@@ -1,8 +1,8 @@
-# GateHub Repository
+# TerraShieldRepository
 
 ## Overview
 
-GateHub is a comprehensive project focused on earthquake data analysis and alert prediction. This repository is organized into distinct folders, each serving a specific purpose in the data processing and modeling pipeline.
+TerraShield is a comprehensive project focused on earthquake data analysis and alert prediction. This repository is organized into distinct folders, each serving a specific purpose in the data processing and modeling pipeline.
 
 ## Folder Structure
 
